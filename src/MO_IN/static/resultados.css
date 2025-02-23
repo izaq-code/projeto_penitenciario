@@ -1,0 +1,147 @@
+
+.cabecalho-historico {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .cabecalho-historico h1 {
+    font-size: 16px;
+    margin-top: 6px;
+  }
+  
+  .cabecalho-historico i {
+    margin-top: 6px;
+  }
+  
+  #filtro {
+    margin-top: 1px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .container {
+    border-radius: 10px;
+    padding: 30px 30px;
+    padding-bottom: 40px;
+    height: 1000px;
+    overflow: hidden;
+    background-color: var(--cor-padrao-light);
+    border: 1px solid rgb(0, 0, 0, 0.3);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+
+  th {
+    font-size: 17px;
+    padding: 18px;
+    font-weight: bolder;
+  }
+  
+  .table-wrapper {
+    height: 1000px;
+    overflow-x: auto;
+    overflow-y: scroll;
+  }
+  
+  .table-wrapper::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  
+  .filtro-label {
+    font-size: 14px;
+  }
+  
+  tr.linha-abaixo {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  }
+
+
+  .botao {
+    background-color: var(--cor-principal);
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .botao:hover {
+    background-color: var(--cor-principal-hover);
+    transition: 0.2s all linear;
+  }
+  
+  .barra-pesquisa{
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 30px;
+    border: 2px solid rgb(0, 0, 0, 0.3);
+
+  }
+
+  td {
+    text-align: center; 
+    vertical-align: middle; 
+    padding: 24px;
+  }
+  
+  #campoPesquisa {
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-radius: 7px;
+  }
+  
+  
+  @media only screen and (max-width: 1500px) {
+      .table-wrapper {
+          height: 700px;
+   
+        }
+    }
+  
+    @media only screen and (max-width: 1150px) {
+      .table-wrapper {
+          height: 350px;
+   
+        }
+    }
+  
+  @media only screen and (max-width: 1200px) {
+    .cabecalho-historico {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    #filtro {
+      margin-left: 0;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .cabecalho-historico {
+      gap: 10px;
+    }
+    .table-wrapper {
+      height: 230px;
+  
+    }
+    #filtro {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      width: 100%;
+    }
+  }

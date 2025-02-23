@@ -1,0 +1,25 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Projeto Penitenciário
+authors:
+  - family-names: Coelho de Azeredo
+    given-names: Felipe
+  - family-names: Gomes Azevedo
+    given-names: Isaque
+  - family-names: Nunes Guerra Ribeiro
+    given-names: Mateus
+  - family-names: Grojpen Couto
+    given-names: Pedro
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Bastos de Paula
+    given-names: Hugo
+keywords:
+  - Sistema Penitenciário
+  - Analise exploratoria
+  - Ciência de Dados
+  - Aprendizado de Máquina
+repository-code: https://github.com/ICEI-PUC-Minas-PPL-CDIA/ppl-cd-pcd-sist-int-2024-2-projeto_penitenciario
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-11-29
