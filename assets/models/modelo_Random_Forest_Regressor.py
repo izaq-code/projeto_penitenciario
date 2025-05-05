@@ -56,3 +56,29 @@ print(f'\nResultados para Laborterapia Externa:')
 print(f'MSE: {mse_rf_externo}')
 print(f'MAE: {mae_rf_externo}')
 print(f'R²: {r2_rf_externo}')
+
+import matplotlib.pyplot as plt
+
+# Configurar o layout do gráfico
+plt.figure(figsize=(14, 6))
+
+# Gráfico para Laborterapia Interna
+plt.subplot(1, 2, 1)
+plt.scatter(y_test_interno, y_pred_interno, alpha=0.7, color='skyblue', edgecolor='k')
+plt.plot([y_test_interno.min(), y_test_interno.max()], [y_test_interno.min(), y_test_interno.max()], 'r--')
+plt.title('Previsão vs Real (Interno)')
+plt.xlabel('Valores Reais')
+plt.ylabel('Valores Previstos')
+plt.grid(True)
+
+# Gráfico para Laborterapia Externa
+plt.subplot(1, 2, 2)
+plt.scatter(y_test_externo, y_pred_externo, alpha=0.7, color='lightgreen', edgecolor='k')
+plt.plot([y_test_externo.min(), y_test_externo.max()], [y_test_externo.min(), y_test_externo.max()], 'r--')
+plt.title('Previsão vs Real (Externo)')
+plt.xlabel('Valores Reais')
+plt.ylabel('Valores Previstos')
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()

@@ -70,3 +70,29 @@ print(f'Resultados para Laborterapia Externa com Gradient Boosting:')
 print(f'MSE: {mse_gb_externo}')
 print(f'MAE: {mae_gb_externo}')
 print(f'R²: {r2_gb_externo}')
+
+import matplotlib.pyplot as plt
+
+# Configurar o layout do gráfico
+plt.figure(figsize=(14, 6))
+
+# Gráfico para Laborterapia Interna com Gradient Boosting
+plt.subplot(1, 2, 1)
+plt.scatter(y_test_interno, y_pred_gb_interno, alpha=0.7, color='cornflowerblue', edgecolor='k')
+plt.plot([y_test_interno.min(), y_test_interno.max()], [y_test_interno.min(), y_test_interno.max()], 'r--')
+plt.title('Previsão vs Real (Interno - Gradient Boosting)')
+plt.xlabel('Valores Reais')
+plt.ylabel('Valores Previstos')
+plt.grid(True)
+
+# Gráfico para Laborterapia Externa com Gradient Boosting
+plt.subplot(1, 2, 2)
+plt.scatter(y_test_externo, y_pred_gb_externo, alpha=0.7, color='mediumseagreen', edgecolor='k')
+plt.plot([y_test_externo.min(), y_test_externo.max()], [y_test_externo.min(), y_test_externo.max()], 'r--')
+plt.title('Previsão vs Real (Externo - Gradient Boosting)')
+plt.xlabel('Valores Reais')
+plt.ylabel('Valores Previstos')
+plt.grid(True)
+
+plt.tight_layout()
+plt.show()
